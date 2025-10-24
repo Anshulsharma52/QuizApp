@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App with Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Host adds questions -->
+    <div id="addQuestions">
+      <h2>Add Question (Host)</h2>
+      <input type="text" id="questionInput" placeholder="Enter question">
+      <input type="text" class="optionInput" placeholder="Option 1">
+      <input type="text" class="optionInput" placeholder="Option 2">
+      <input type="text" class="optionInput" placeholder="Option 3">
+      <input type="text" class="optionInput" placeholder="Option 4">
+      <input type="number" id="answerInput" placeholder="Correct option number (1-4)">
+      <button id="addQuestionBtn">Add Question</button>
+    </div>
+
+    <!-- Preview questions and start quiz -->
+    <div id="previewQuestions">
+      <h2>Preview Questions (Host)</h2>
+      <ul id="questionList"></ul>
+      <button id="startQuizBtn">Start Quiz for User</button>
+    </div>
+
+    <!-- User login -->
+    <div id="loginContainer" style="display:none;">
+      <h2>Enter Your Name to Start Quiz</h2>
+      <input type="text" id="userNameInput" placeholder="Your Name">
+      <button id="loginBtn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz container -->
+    <div id="quizContainer" style="display:none;">
+      <h2 id="quizQuestion"></h2>
+      <ul id="quizOptions"></ul>
+      <button id="nextBtn">Next</button>
+      <p id="scoreDisplay"></p>
+    </div>
+
+    <!-- Leaderboard toggle button -->
+    <button id="toggleLeaderboardBtn" style="display:none;">Show Leaderboard</button>
+
+    <!-- Leaderboard container -->
+    <div id="leaderboardContainer">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboardList"></ul>
+    </div>
+
+    <button id="resetBtn">Reset Quiz</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

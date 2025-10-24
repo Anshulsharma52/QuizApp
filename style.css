@@ -1,0 +1,158 @@
+/* Body & container */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  max-width: 650px;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Headings */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+input {
+  display: block;
+  margin: 12px auto;
+  padding: 12px 15px;
+  width: 85%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #74ebd5;
+  box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  margin: 12px 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* General hover */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Quiz & options */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 12px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.02);
+}
+
+/* Score display */
+#scoreDisplay {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Leaderboard button */
+#toggleLeaderboardBtn {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 25px;
+  margin-top: 15px;
+}
+
+#toggleLeaderboardBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Leaderboard container */
+#leaderboardContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+  opacity: 0;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  border-radius: 12px;
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+#leaderboardContainer.show {
+  max-height: 500px;
+  opacity: 1;
+  padding: 15px 20px;
+}
+
+/* Leaderboard items */
+#leaderboardList li {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+#leaderboardList li:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .container {
+    padding: 20px;
+  }
+
+  input, button {
+    width: 95%;
+  }
+
+  li {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
